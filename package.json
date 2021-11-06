@@ -1,7 +1,7 @@
 {
   "name": "neu-board",
   "version": "1.1.0",
-  "homepage": "https://itskaustubh.github.io/neuboard",
+  "homepage": "https://pranavbhagwat81.github.io/react-message-board",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
