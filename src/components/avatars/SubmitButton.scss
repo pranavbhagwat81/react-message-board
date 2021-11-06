@@ -1,0 +1,92 @@
+:root {
+    --gray: #e4ebf5;
+    --size: 25vw;
+    --scalingFactor: calc(100 / 25); 
+}
+
+.dot, .trigger {
+    // position: absolute;
+    // top: 20px;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    
+    height: 30px;
+    width: 110px;
+    // margin: 10px;
+    background: var(--gray);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+}
+
+
+.dot{
+    z-index: 0;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.trigger {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    // color: var(--greyDark);
+    &:hover { color: var(--primary); }
+    &:active {
+      box-shadow: var(--inner-shadow);
+      
+    }
+}
+
+.trigger:active + .dots > .dot{
+    display: none;
+}
+
+  
+.animate-submit + .trigger + .dots > .dot {
+    animation-name: wave;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count : infinite;
+}
+
+.disable-submit + .trigger{
+    color : darkgray;
+    box-shadow: var(--inner-shadow);
+    cursor: initial;
+}
+
+.dot {
+    opacity: 1;
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+}
+
+.dot:nth-of-type(2) {
+    z-index: 1;
+    animation-delay: .5s;
+}
+
+.dot:nth-of-type(3) {
+    z-index: 2;
+    animation-delay: 1s;
+}
+
+@keyframes wave{
+    0% {
+        opacity: 1;
+        transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+    }  
+    100% {
+        opacity: 0;
+        transform: translate3d(-50%,-50%,0) scale3d(var(--scalingFactor),var(--scalingFactor),1);
+    }
+}

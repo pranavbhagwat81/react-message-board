@@ -1,0 +1,33 @@
+
+.nav-scaffold{
+    background-color: var(--greyLight-1);
+    height: 70px;  
+    // border-radius: 0 0 8px 8px;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+
+    .nav-container{
+        display : flex;
+        justify-content: space-between;
+        padding: 8px;
+
+        .logo{
+            font-family: 'Righteous', cursive;
+            font-size: 32px;
+            cursor: pointer;
+
+
+            .logo-neu{
+                color: plum;
+            }
+
+            .logo-board{
+                color: gray;
+            }
+        }
+
+        .nav-links{
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+}

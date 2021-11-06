@@ -1,0 +1,28 @@
+
+.dashboard-scaffold{
+    display: flex;
+}
+.dashboard-posts{
+    margin: 0 0 0 200px;
+    width: 100%;
+    overflow : visible ;
+    overflow-y: auto !important;
+    height: 88vh;
+    padding: 30px 20px 0 0;
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+    .dashboard-posts{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .dashboard-posts{
+        margin: auto;
+    }
+}
+

@@ -1,0 +1,104 @@
+.custom-avatar-scaffold{
+    margin : 30px 0;
+    background-color: var(--greyLight-1);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    width: 450px;
+    border-radius: 15px;
+    padding: 10px;
+
+    .avatar{
+        width: min-content;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .info{
+        margin: 20px 20px 0 20px;
+        // padding-bottom: 10vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 45vh;
+
+        .field{
+            line-height: 1;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.1rem;
+            color : var(--primary) !important;
+
+            .color-pane-wrapper{
+                position: relative;
+            }
+        }
+
+        .opts{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            // width: 25rem;
+
+            .opt{
+                // margin: 0 0.65rem 0.75rem 0;
+                // cursor: pointer;
+                // transition: all 0.25s ease-out;
+                // line-height: 1;
+                // padding: 0.4rem 1.5rem;
+                // border: 1px solid rgba(0, 0, 0, 0.1);
+                // color: #888;
+                // font-size: 0.9rem;
+                padding: 10px 10px;
+                color: #535D74;
+                background-color: var(--back-color);
+                box-shadow: inset 0px 0px 4px rgba(255, 255, 255, .2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0);
+                transition: box-shadow .4s ease;
+                cursor: pointer;
+                transition: box-shadow 0.5s ease-in-out;
+
+
+            }
+
+            .active{
+                box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0), inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    .colorPanelWrapper{
+        position: relative;
+
+        .colorPanel{
+            position: absolute;
+            z-index : 100;
+        }
+    }
+
+    .icon-palette{
+        width: 20px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    .color-picker{
+        display: flex;
+    }
+
+}
+
+
+@media only screen and (max-width: 930px) {
+    .custom-avatar-scaffold{
+        width: 50vw;
+        margin: 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .custom-avatar-scaffold{
+        width: 90vw;
+        margin: 30px 10px;
+    }
+}

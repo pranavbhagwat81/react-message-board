@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #e4ebf5;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+
+
+// https://stackoverflow.com/a/67373942
+.no-select{
+    -webkit-user-select: none;    /* Safari */
+    -webkit-touch-callout: none;  /* iOS Safari */
+    -khtml-user-select: none;     /* Konqueror HTML */
+    -ms-user-select: none;        /* Internet Explorer/Edge */
+    -moz-user-select: none;       /* Old versions of Firefox */
+     user-select: none;           /* Non-prefixed version*/
+}
+
+.user-selectable{
+  -webkit-user-select: text;   
+  -webkit-touch-callout: text;  
+  -khtml-user-select: text;     
+  -ms-user-select: text;        
+  -moz-user-select: text;       
+   user-select: text;           
+}
+
+div{
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-light: #8abdff;
+  --primary-dark: #8040f9;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #60697c;
+  --greyDarkHover : #25272b;
+  // --primary : #9286ff;
+  --primary : #8790f6;
+  --shadow:   .3rem .3rem .6rem var(--greyLight-2), -.2rem -.2rem .5rem var(--white);
+  --inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), inset -.2rem -.2rem .5rem var(--white);
+}
+
+p,h1,h2,h3,h4,h5,h6,a{
+  margin : 0;
+  padding : 0;
+}
+
+img{
+  max-width: 100%;
+  max-height: 250px;
+}
+
+label{
+  display: block;
+  text-align: start;
+  padding: 5px;
+  width: max-content;
+}
+
+// input[type="text"]{
+//   transition: box-shadow 2s ease-in-out !important;
+// }
+
+
+
+@keyframes boxShadowFade {
+  0% { box-shadow: var(--inner-shadow);}
+  50% { box-shadow: none; border: 1px solid aliceblue; }
+  100% { box-shadow: var(--shadow); }
+}
+
+@keyframes boxShadowFadeOut {
+  0% { box-shadow: var(--shadow); }
+  50% { box-shadow: none; border: 1px solid aliceblue; }
+  100% { box-shadow: var(--inner-shadow); }
+}
+
+.hide-scrollbar{
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar{
+    display: none !important;
+  }
+}
+
+.neu-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s ease;
+
+  color: var(--greyDark);
+  &:hover { color: var(--primary); }
+  &:active {
+    box-shadow: var(--inner-shadow);
+  }
+
+}
+
+
+.neulink{
+  color: var(--primary);
+  cursor: pointer;
+  // width: min-content;
+  text-align: end;
+
+  &:hover, &:active{
+    color: var(--primary-dark);
+  }
+}
+
+.form-input{
+  // width: 95%;
+  height: 35px;
+  border: none;
+  border-radius: 1rem;
+  font-size: 16px;            
+  padding-left: 1.4rem;
+  box-shadow: var(--inner-shadow);
+  background: none;
+  font-family: inherit;
+  color: var(--greyDark);
+  margin-bottom: 20px;
+  animation: boxShadowFadeOut 0.4s ease;
+
+  &::placeholder { color: var(--greyLight-3);  }
+  &:focus { 
+      outline: none; 
+      box-shadow: var(--shadow); 
+      animation: boxShadowFade 0.4s ease;
+  }
+}
+
+// .navtext {
+//   margin-top : 10px; 
+// }
+
+.navlinks{
+  display: flex;
+  align-items: last baseline;
+  // align-items: center;
+
+  // & > * {
+      // margin-left: 10px;
+      // margin-right: 10px;
+  // }
+}
+
+p,span,*{
+  color: var(--greyDark);
+}
+
+a:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: inherit;
+}
+
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: inherit;
+}
+
+// NOTIFICATION TOAST
+
+.Toastify__toast-container{
+  color: var(--greyDarkHover) !important;
+}
+
+.Toastify__toast--success, .Toastify__toast--info, .Toastify__toast--error {
+  background: var(--greyLight-1) !important;
+}
+
+.Toastify__toast--success > .Toastify__progress-bar {
+  background: aquamarine;
+}
+
+.Toastify__toast--error > .Toastify__progress-bar {
+  background: salmon;
+}
+
+.Toastify__toast--info > .Toastify__progress-bar {
+  background: lightcyan;
+}
+
+
+.Toastify__close-button {
+  color: var(--greyDarkHover) !important;
+}

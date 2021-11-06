@@ -1,0 +1,135 @@
+
+.name-message-scaffold{
+    margin : 30px 0;
+    background-color: var(--greyLight-1);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    width: 450px;
+    border-radius: 15px;
+    padding: 10px;
+
+    .name-message-container{
+        padding: 20px;
+
+        .form-input{
+            width: 95%;
+            height: 35px;
+            border: none;
+            border-radius: 1rem;
+            font-size: 16px;            
+            padding-left: 1.4rem;
+            box-shadow: var(--inner-shadow);
+            background: none;
+            font-family: inherit;
+            color: var(--greyDark);
+            margin-bottom: 20px;
+            animation: boxShadowFadeOut 0.4s ease;
+        
+            &::placeholder { color: var(--greyLight-3);  }
+            &:focus { 
+                outline: none; 
+                box-shadow: var(--shadow); 
+                animation: boxShadowFade 0.4s ease;
+            }
+        }
+
+        .button-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-container{
+            display: flex;
+            position: relative;
+
+            .giphy-container{
+                position: absolute;
+                right: 25px;
+                z-index: 11;
+                top: -90px;
+            }
+
+            #gif-toggle{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                cursor: pointer;
+                color: var(--greyDark);
+                transition: box-shadow 0.3s ease;
+                margin-left: 10px;
+
+                &:hover{
+                    box-shadow: 0.6rem 0.6rem 0.3rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+                }
+
+                img{
+                    width: 70%;
+                }
+            }
+        }
+
+
+    }
+
+    textarea{
+        height: 10rem !important;
+        // max-width: 350px;   
+        resize : none;
+    }
+}
+
+.reactGiphySearchbox-componentWrapper{
+    // width: max-content !important;
+    width: 265px;
+    // background: aliceblue !important;
+    padding: 10px !important;
+    // border-radius: 5px !important;
+
+    background-color: var(--greyLight-1) !important;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white) !important;
+    border-radius: 10px !important;
+}
+
+.reactGiphySearchbox-listWrapper{
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  
+    &::-webkit-scrollbar{
+      display: none !important;
+    }
+}
+
+.reactGiphySearchbox-poweredByGiphy > svg > path {
+    fill : black;
+}
+
+.reactGiphySearchbox-searchForm-input{
+    font-size: 12px !important;
+    padding-left: 1.4rem !important;
+    box-shadow: var(--inner-shadow) !important;
+    background: none !important;
+    animation: boxShadowFadeOut 0.4s ease !important;
+    border: none !important;
+    border-radius: 1rem !important;
+}
+
+
+@media only screen and (max-width: 930px) {
+    .name-message-scaffold{
+        // margin : 0;
+        width: 50vw;
+        margin: 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .name-message-scaffold{
+        margin : 0 0 10px 0;
+        width: 90vw;
+    }
+}
