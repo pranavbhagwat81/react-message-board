@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="48" height="48">
+
+<g transform="matrix(0.75 0 0 0.75 0 0)">
+	<g transform="matrix(0.125 0 0 0.125 0 0)">
+	</g>
+    <path transform="matrix(0.125 0 0 0.125 0 0)" d="M504.1 256C 504.1 119 393 7.9 256 7.9C 119 7.9 7.9 119 7.9 256C 7.9 393 119 504.1 256 504.1C 393 504.1 504.1 393 504.1 256z" stroke="none" fill="#E04F5F" fill-rule="nonzero"/>
+	<g transform="matrix(0.125 0 0 0.125 0 0)">
+	</g>
+    <path transform="matrix(0.125 0 0 0.125 0 0)" d="M285 256L357.5 171.8C 365.4 162.6 364.4 148.8 355.2 140.8C 346 132.9 332.2 133.9 324.3 143.1L324.3 143.1L256 222.4L187.8 143.2C 179.9 134 166 133 156.8 140.9C 147.6 148.8 146.6 162.7 154.5 171.9L154.5 171.9L227 256L154.5 340.2C 146.6 349.4 147.6 363.2 156.8 371.2C 160.9 374.8 166 376.5 171.1 376.5C 177.3 376.5 183.4 373.9 187.7 368.9L187.7 368.9L255.9 289.7L324.1 368.9C 328.4 373.9 334.6 376.5 340.7 376.5C 345.8 376.5 350.9 374.8 355 371.2C 364.2 363.3 365.2 349.4001 357.3 340.2L357.3 340.2L285 256z" stroke="none" fill="#FFFFFF" fill-rule="nonzero"/>
+</g>
+</svg>
